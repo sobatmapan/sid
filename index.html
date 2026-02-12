@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Webmaster CS — Technical Notes & Site Operations</title>
+  <meta name="description" content="Webmaster CS berisi catatan teknis ringan seputar pengelolaan website, operasional server, dan praktik dasar webmaster." />
+  <link rel="canonical" href="https://webmaster-cs.xyz/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#070914;
+      --card:rgba(255,255,255,.06);
+      --line:rgba(255,255,255,.12);
+      --text:rgba(255,255,255,.90);
+      --muted:rgba(255,255,255,.70);
+      --a1:#0ea5e9;
+      --a2:#22c55e;
+      --shadow:0 18px 50px rgba(0,0,0,.35);
+      --r:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Plus Jakarta Sans",system-ui,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(800px 420px at 10% -10%,rgba(14,165,233,.18),transparent 60%),
+        radial-gradient(800px 420px at 90% 0%,rgba(34,197,94,.12),transparent 60%),
+        var(--bg);
+    }
+    a{color:inherit}
+    .container{max-width:980px;margin:auto;padding:0 18px}
+
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      background:rgba(7,9,20,.6);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(10px)
+    }
+    .topbar-inner{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:12px 0
+    }
+    .badge{
+      font-size:12px;font-weight:900;
+      padding:7px 12px;border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.2)
+    }
+    .nav a{
+      font-size:12px;font-weight:900;
+      text-decoration:none;margin-left:10px;
+      padding:7px 10px;border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted)
+    }
+
+    .site-header{padding:42px 0 18px}
+    h1{
+      margin:0;
+      font-family:"Space Grotesk",sans-serif;
+      font-size:clamp(28px,3.2vw,46px)
+    }
+    .subtitle{
+      margin-top:10px;
+      color:var(--muted);
+      max-width:70ch
+    }
+
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.04));
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      box-shadow:var(--shadow)
+    }
+    .section{padding:18px}
+    @media(min-width:768px){.section{padding:24px}}
+
+    h2{
+      font-family:"Space Grotesk",sans-serif;
+      margin:0 0 10px;
+      font-size:clamp(18px,2.2vw,28px)
+    }
+    p{margin:0 0 12px;color:var(--muted);line-height:1.75}
+
+    blockquote{
+      margin:14px 0;
+      padding:12px 14px;
+      border-left:4px solid var(--a1);
+      background:rgba(0,0,0,.18);
+      border-radius:12px
+    }
+    blockquote p{margin:0;color:#fff;font-weight:800}
+
+    .grid{
+      display:grid;gap:12px
+    }
+    @media(min-width:900px){
+      .grid{grid-template-columns:1fr 1fr}
+    }
+
+    .links{
+      list-style:none;padding:0;margin-top:12px;
+      display:grid;gap:10px
+    }
+    @media(min-width:640px){.links{grid-template-columns:1fr 1fr}}
+    @media(min-width:900px){.links{grid-template-columns:1fr 1fr 1fr}}
+
+    .links li a{
+      display:flex;justify-content:space-between;
+      padding:10px 12px;
+      font-weight:900;
+      text-decoration:none;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.18)
+    }
+    .links li a:after{content:"↗";opacity:.6}
+
+    footer{
+      margin-top:22px;
+      padding:18px 0 26px;
+      text-align:center;
+      font-size:12px;
+      color:rgba(255,255,255,.55);
+      border-top:1px solid var(--line)
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="badge">WEBMASTER • CS</div>
+    <nav class="nav">
+      <a href="#artikel">Artikel</a>
+      <a href="#referensi">Referensi</a>
+    </nav>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <h1>Webmaster CS</h1>
+    <p class="subtitle">
+      Catatan teknis ringan untuk pengelolaan website, stabilitas layanan, dan praktik dasar operasional digital.
+    </p>
+  </div>
+</header>
+
+<main class="container">
+
+<section id="artikel" class="card section">
+  <h2>Catatan Dasar untuk Webmaster Pemula</h2>
+
+  <div class="grid">
+    <div class="card section" style="box-shadow:none">
+      <h2 style="font-size:18px">1) Stabilitas Lebih Penting dari Fitur</h2>
+      <p>
+        Website yang sederhana tapi stabil jauh lebih berguna dibandingkan sistem kompleks yang sering bermasalah.
+      </p>
+    </div>
+    <div class="card section" style="box-shadow:none">
+      <h2 style="font-size:18px">2) Monitoring Rutin</h2>
+      <p>
+        Biasakan cek uptime, response server, dan error log secara berkala untuk mencegah masalah kecil jadi besar.
+      </p>
+    </div>
+  </div>
+
+  <div class="grid" style="margin-top:12px">
+    <div class="card section" style="box-shadow:none">
+      <h2 style="font-size:18px">3) Backup Itu Wajib</h2>
+      <p>
+        Selalu siapkan backup harian atau mingguan. Saat terjadi error, backup adalah penyelamat utama.
+      </p>
+    </div>
+    <div class="card section" style="box-shadow:none">
+      <h2 style="font-size:18px">4) Dokumentasi Internal</h2>
+      <p>
+        Catat perubahan konfigurasi, update plugin, dan penyesuaian server agar mudah dilacak di kemudian hari.
+      </p>
+    </div>
+  </div>
+
+  <blockquote>
+    <p>Web yang sehat adalah web yang mudah dirawat, bukan yang rumit.</p>
+  </blockquote>
+</section>
+
+<section id="referensi" class="card section" style="margin-top:18px">
+  <h2>Referensi</h2>
+  <ul class="links">
+  <li><a href="https://datahklotto.us/" target="_blank" rel="noopener">Data HK Lotto</a></li>
+  <li><a href="http://178.128.52.7/" target="_blank" rel="noopener">Data SDY Lotto</a></li>
+  <li><a href="https://pafiairseruk.org/" target="_blank" rel="noopener">Data HK</a></li>
+  <li><a href="http://178.128.89.94/" target="_blank" rel="noopener">Data SGP</a></li>
+  <li><a href="https://pafitanglad.org/" target="_blank" rel="noopener">Data SDY</a></li>
+  <li><a href="https://lamarsalaplayadegandia.com/" target="_blank" rel="noopener">Data HK</a></li>
+  <li><a href="http://159.223.35.146/" target="_blank" rel="noopener">Data SDY Lotto</a></li>
+  <li><a href="https://wholesalejerseys4sale.com/" target="_blank" rel="noopener">Prediksi Keluaran</a></li>
+  <li><a href="https://pafibenermeriahkabupaten.org/" target="_blank" rel="noopener">Prediksi Jitu</a></li>
+  <li><a href="http://178.128.116.128/" target="_blank" rel="noopener">Prediksi SDY</a></li>
+  <li><a href="https://prediksihkpools.net/" target="_blank" rel="noopener">Prediksi HK</a></li>
+  <li><a href="http://178.128.215.158/" target="_blank" rel="noopener">Angkanet</a></li>
+  <li><a href="http://178.128.21.45/" target="_blank" rel="noopener">Angkanet Result</a></li>
+  <li><a href="https://pafipcgunungkidulkab.org/" target="_blank" rel="noopener">Data HK 6D</a></li>
+</ul>
+</section>
+
+</main>
+
+<footer>
+  © 2026 webmaster-cs.xyz — Technical Notes
+</footer>
+
+</body>
+</html>
